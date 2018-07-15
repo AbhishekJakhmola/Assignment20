@@ -1,0 +1,12 @@
+import tweepy
+import textblob
+from textblob import TextBlob
+
+consumer_key = '42lWh4Cj1cj9UCcnE0vPBpUoA'
+consumer_secret ='irW1k2gDsegMFqqrk6PMEINYnOgTN5zc7lwmloujKPVh8oQr0y'
+access_token = '924574884285489153-YPMTw6SAROkyQZbyeZVtzRXP9Wq5ecW'
+access_token_secret = 'j32xEjoW5NXiSiaG86mQV8Yr0tRYW4zz6rLJbIIsOLAlB'
+oauth = tweepy.OAuthHandler(consumer_key,consumer_secret)
+oauth.set_access_token(access_token,access_token_secret)
+api = tweepy.API(oauth)
+public_tweets = api.search("#SakhtLaunda")
